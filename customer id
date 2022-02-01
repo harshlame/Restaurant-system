@@ -1,0 +1,253 @@
+import random
+cid = []
+rc = []
+i = 0
+
+
+def Home():
+      cid = random.randrange(8)+10
+      print(cid)
+      print("\t 1 Restaurant (Menu Card)\n")
+      num=int(input("===>"))
+
+              
+      if num == 1:
+              print(" ")
+              restaurant()
+      else:
+              exit()
+
+def restaurant():
+    c = input("C ID: ")
+    global i
+    f = 0
+    r = 0
+    for n in range(0,i):
+        if cid[n]==c:
+            f = 1
+            print("""          --------------------------------------------------------------------
+                                                    HOTEL RIVER VIEW
+                               --------------------------------------------------------------------
+                                                        Menu Card                           
+                               --------------------------------------------------------------------
+                               BEVARAGES
+                               ------------------------------
+                               1  Regular Tea................ 20.00
+                               2  Masala Tea................. 40.00
+                               3  Coffee..................... 40.00
+                               4  Cold Drink................. 50.00
+                               5  Mojito..................... 50.00
+                               6  Mango Juice................ 50.00
+                               7  Orange Juice............... 50.00
+
+                               SOUPS
+                               ------------------------------
+                               8  Tomato Soup............... 110.00
+                               9  Hot & Sour................ 110.00
+                               10 Sweet Corn................ 110.00
+                               11 Veg. Manchow.............. 110.00
+    
+                               MAIN COURSE
+                               ------------------------------
+                               12 Veg. Chilly............... 130.00
+                               13 Veg. Manchurian........... 130.00
+                               14 Paneer Chilly............. 150.00
+                               15 Panner Tikka Masala....... 229.00
+                               16 Panner Butter Masala...... 229.00
+                               17 Panner Toofani............ 229.00
+                               18 Panner Angara ............ 229.00
+                               19 Panner Lucknowi........... 229.00
+                               20 Panner Handi.............. 229.00
+                               21 Panner Bhurji............. 229.00
+                               22 Panner Lasoni............. 229.00
+                               23 Panner Rajwadi............ 229.00
+                               24 Panner Kadai.............. 229.00
+                               25 Palak Paneer.............. 259.00
+                               26 Cheese Butter Masala...... 259.00
+                               27 Cheese Kaju Masala........ 259.00
+                               28 Kaju Kofta................ 259.00
+                               29 Malai Kofta............... 259.00
+                               30 Alpine Special............ 259.00
+                               31 Tawa Sabaji............... 259.00
+                               32 Balti Sabji............... 259.00
+                               33 Kolhapuri Sabji........... 259.00
+                               34 Makkhanwala Sabji......... 259.00
+                               35 Dum Aloo.................. 219.00
+                               36 Lasooni Sabji............. 219.00
+                               37 Mix Sabji................. 219.00
+                               38 Pahadi Sabji.............. 219.00
+                               39 Plain Palak............... 219.00
+                               40 Methi Mutter Malai........ 219.00
+                               41 Lazeez Sabaji............. 219.00
+                               42 Jaipuri Sabji............. 219.00
+        
+                                   INDIAN BREAD
+                               ------------------------------
+                               43 Roti Plain................. 30.00
+                               44 Roti Butter................ 35.00
+                               45 Naan Plain................. 45.00
+                               46 Naan Butter................ 50.00
+                               47 Stuffed Paratha............ 89.00
+                               48 Pudina Paratha............. 89.00
+                               49 Kulcha..................... 50.00
+                               50 Onion Kulcha............... 59.00
+                               51 Garlic Kulcha.............. 89.00
+                               52 Missi Roti................. 59.00
+                               53 Chapatti................... 20.00
+                                
+                               DAL
+                               ------------------------------
+                               54 Dal Fried................. 139.00
+                               55 Dal Fried Butter.......... 149.00
+                               56 Dal Makhni................ 169.00
+    
+                               RICE
+                               ------------------------------
+                               57 Steam Rice................ 139.00
+                               58 Jeera Rice................ 149.00
+                               59 Veg. Pulao................ 169.00
+                               60 Cheese Pulao.............. 179.00
+                               62 Veg. Biryani.............. 199.00
+                               63 Veg.Hydrabadi Biryani..... 199.00
+                               64 Kashmiri Pulao............ 169.00
+    
+                               CHINESE
+                               ------------------------------
+                               65 Veg. Manchurian Dry/Gravy. 219.00
+                               66 Veg. Spring Roll.......... 219.00
+                               67 Veg. Crispy............... 219.00
+                               68 Paneer Kurkure............ 219.00
+    
+                               SANDWICH & PIZZA
+                               ------------------------------
+                               69 Bread Butter / Jam......... 69.00
+                               70 Veg. Sandwich............. 129.00
+                               71 Veg. Pizza................ 159.00
+                               72 Aloo Mutter Sandwich...... 139.00
+                               73 French Fries.............. 119.00
+                               74 Cheese Sandwich........... 139.00
+                               75 Margherita Pizza.......... 159.00
+                               76 Roasted Pappad............. 30.00
+                               78 Fried Pappad............... 35.00
+                               79 Masala Pappad.............. 50.00
+    
+                               DESERT
+                               ------------------------------
+                               80 Vanilla...................  79.00
+                               81 Pineapple.................  79.00
+                               82 Chocolate.................  89.00
+                               83 Strawberry................  89.00
+                               84 Butter Scotch............. 100.00
+                               85 Almond Carnival........... 109.00
+                               86 Cookie Cream.............. 109.00
+                               87 American Nuts............. 109.00
+                               88 Vanilla with Brownie...... 109.00
+                               Press 0 to end""")
+            ch=1
+            while(ch!=0):
+                ch=int(input("===>"))
+                if ch==1 or ch==53:
+                    rs=20
+                    r=r+rs
+                elif ch==44 or ch==78:
+                    rs=35
+                    r=r+rs
+                elif ch==43 or ch==76:
+                    rs=30
+                    r=r+rs
+                elif ch==2 or ch==3:
+                    rs=40
+                    r=r+rs
+                elif ch==45:
+                    rs=45
+                    r=r+rs
+                elif ch==4 or ch==5 or ch==6 or ch==7 or ch==46 or ch==49 or ch==79:
+                    rs=50
+                    r=r+rs
+                elif ch==50 or ch==52:
+                    rs=59
+                    r=r+rs
+                elif ch==69:
+                    rs=69
+                    r=r+rs
+                elif ch<=10 and ch>=9:
+                    rs=70
+                    r=r+rs
+                elif ch==80 or ch==81:
+                    rs=79
+                    r=r+rs
+                elif ch==55 or ch==58:
+                    rs=149
+                    r=r+rs
+                elif ch==71 or ch==75:
+                    rs=159
+                    r=r+rs
+                elif ch==60:
+                    rs=179
+                    r=r+rs
+                elif ch==62 or ch==63:
+                    rs=199
+                    r=r+rs
+                elif ch==70:
+                    rs=129
+                    r=r+rs
+                elif ch==39 or ch==73:
+                    rs=119
+                    r=r+rs
+                elif (ch<=11 and ch>=8):
+                    rs=110
+                    r=r+rs
+                elif ch<=19 and ch>=18:
+                    rs=120
+                    r=r+rs
+                elif (ch<=26 and ch>=20) or ch==42:
+                    rs=140
+                    r=r+rs
+                elif ch==14:
+                    rs=150
+                    r=r+rs
+                elif ch<=24 and ch>=15:
+                    rs=229
+                    r=r+rs
+                elif ch==76:
+                    rs=29
+                    r=r+rs
+                elif ch==56 or ch==59 or ch==64:
+                    rs=169
+                    r=r+rs
+                elif ch==54 or ch==57 or ch==72 or ch==74:
+                    rs=139
+                    r=r+rs
+                elif ch<=34 and ch>=25:
+                    rs=259
+                    r=r+rs
+                elif ch<=42 and ch>=35 and ch>=65 and ch<=68:
+                    rs=219
+                    r=r+rs
+                elif ch==47 or ch==48 or ch==51 or ch==82 or ch==83:
+                    rs=89
+                    r=r+rs
+                elif ch==84:
+                    rs=100
+                    r=r+rs
+                elif ch==12 or ch==13:
+                    rs=130
+                    r=r+rs
+                elif ch<=88 and ch>=85:
+                    rs=109
+                    r=r+rs
+                elif ch==0:
+                    pass
+                else:
+                    print("Wrong Choice..!!")
+            print("Total: ", r)
+
+            r=r+rc.pop(n)
+            rc.append(r)
+        else:
+            pass
+    if f == 0:
+        print("Invalid Customer ID")
+
+
+Home()
